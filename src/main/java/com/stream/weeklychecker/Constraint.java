@@ -2,7 +2,6 @@ package com.stream.weeklychecker;
 
 import java.io.File;
 import java.util.Optional;
-import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.stream.Stream;
 
@@ -14,7 +13,7 @@ public class Constraint
 
     public Optional<String> check(File file)
     {
-        return condition.test(file) ? Optional.of(message) : Optional.empty();
+        return condition.test(file) ? Optional.empty() : Optional.of(message);
     }
 
     public Constraint(String message, Predicate<File> condition)

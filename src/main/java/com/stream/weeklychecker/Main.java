@@ -14,7 +14,11 @@ public class Main
         val checker = new WeeklyChecker(path,
                                         weekName,
                                         new Constraint("周报未完成", findFile("周报")),
-                                        new Constraint("任务未完成", findFile(".java")));
+                                        new Constraint("任务未完成",
+                                                       findFile("pom.xml")
+                                                               .or(findFile("build.gradle"))
+                                                               .or(findFile(".js"))));
         System.out.println(checker.getCheckReport());
+//        expandWithSelf(new File(path)).forEach(System.out::println);
     }
 }
