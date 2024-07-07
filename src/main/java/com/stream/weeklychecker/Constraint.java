@@ -8,21 +8,19 @@ import java.util.stream.Stream;
 
 public class Constraint
 {
-    private final Function<File, Optional<String>> handler;
+    private final Predicate<File> condition;
 
-    private Constraint(Function<File, Optional<String>> handler)
-    {
-        this.handler = handler;
-    }
+    private final String message;
 
     public Optional<String> check(File file)
     {
-        return handler.apply(file);
+        return condition.test(file) ? Optional.of(message) : Optional.empty();
     }
 
     public Constraint(String message, Predicate<File> condition)
     {
-        this(file -> condition.test(file) ? Optional.empty() : Optional.of(message));
+        this.message = message;
+        this.condition = condition;
     }
 
     public static Predicate<File> findFile(String name)

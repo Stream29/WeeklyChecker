@@ -9,7 +9,7 @@ public class Main
     public static void main(String[] args)
     {
         val path = "E:\\ACodeSpace\\Stream-NEUQ-ACM-weekly-report-24";
-        val weekName = "week2";
+        val weekName = "week5";
         val checker = new WeeklyChecker(path,
                                         weekName,
                                         new Constraint("周报未完成", findFile("周报")),
