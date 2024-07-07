@@ -30,6 +30,7 @@ public class WeeklyChecker
                                  .filter(File::isDirectory)
                                  .filter(f -> !f.getName().contains("."))
                                  .filter(f -> !f.getName().equals("刁一轩"))
+                                 .filter(f -> !f.getName().equals("每周任务"))
                                  .toList();
 
         for(val studentFile : studentFiles)
