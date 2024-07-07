@@ -1,11 +1,8 @@
 package com.stream.weeklychecker;
 
-import lombok.SneakyThrows;
 import lombok.val;
 
-import java.util.Scanner;
-
-import static com.stream.weeklychecker.Constraint.*;
+import static com.stream.weeklychecker.Constraint.findFile;
 
 public class Main
 {
