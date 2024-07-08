@@ -8,7 +8,7 @@ public class Main
 {
     public static void main(String[] args)
     {
-        val path = "E:\\ACodeSpace\\Stream-NEUQ-ACM-weekly-report-24";
+        val path = "E:\\ACodeSpace\\IDEA\\Stream-weekly-report-24";
         val weekName = "week5";
         System.out.println("周报检查");
         val checker = new WeeklyChecker(path,
