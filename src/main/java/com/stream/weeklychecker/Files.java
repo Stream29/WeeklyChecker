@@ -16,7 +16,6 @@ public class Files
 
     public static Stream<File> subfileStream(File file)
     {
-
         return Arrays.stream(subfiles(file));
     }
 }
